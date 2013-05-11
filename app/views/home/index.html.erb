@@ -2,3 +2,15 @@
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
 <% end %>
+<br><br>
+<p>
+	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+</p>
+
+<p>
+	<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+</p>
+
+<p>
+	<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+</p>
